@@ -1,0 +1,385 @@
+.noscroll,
+.noscroll body {
+    overflow: hidden;
+}
+.noscroll body {
+    position: relative;
+}
+.s-title{
+	text-align: left;
+	margin-left: 10px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 20px;
+}
+.inputtype{	
+	margin-right: 1%;
+	display: inline;
+	float: left;
+	text-align: left;
+}
+.main{
+	margin-bottom: 1px;
+}
+.am-btn-default{
+	color: black;
+	background-color: white;
+	border-color: #F2F2F2;
+}
+.am-btn.am-radius{
+	/*position: absolute;*/
+	/*bottom: 20px;*/
+	/*margin-top: 200px;*/
+	/*margin-right: 30px;*/
+	width: 100px;
+}
+.am-btn.am-round{
+
+	background-color: white;
+	border-radius: 1px;
+}
+.am-btn-default{
+	margin-right: 13px;
+	background-color: white;
+	border-color:#D5D5D5;
+}
+.am-btn-default:hover{
+	color: #0a6999;
+	background-color: white;
+	background: url(../img/selected.png)no-repeat bottom -1px right -2px;
+	background-size: 15px;
+
+}
+.num{
+	margin-left:-70px;
+	height: 170px;
+	line-height: 170px;
+}
+
+.allmain{
+	margin-bottom: 10px;
+}
+.money{
+
+}
+.spchoose{
+	text-align: center;
+	padding-bottom: 25px;
+	padding-top: 10px;
+}
+.sp-button{
+	margin-top: 30%;
+	margin-left: 10%;
+	height: 70px;
+	line-height: 70px;
+}
+
+
+.sp-button{
+	margin-top: 30%;
+	margin-left: 0;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+}
+.undistributed{
+	float: left;
+	margin-left: 10px;
+	font-size: 15px;
+}
+.money,.money2{
+	border:1px solid #D1D1D1;
+	/*height: 30px;*/
+	/*line-height: 40px;*/
+	display: inline-block;
+	padding: 0px 10px;
+	font-size: 13px;
+	line-height: 25px;
+	border-radius: 3px;
+	color: #0f9ae0;
+}
+.sp-button button{
+	display: inline-block;
+	width: 100px;
+}
+.layui-btn+.layui-btn{
+	margin-left: 5%;
+}
+.spchoose input{
+	margin-right: 3%;
+}
+.t-buyInput{
+	border:1px solid #d1d1d1;
+	border-radius: 3px;
+	display: inline-block;
+	width: 40%;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+}
+.t-buyInput2{
+	margin-left:5%;
+}
+.t-buyTicketTitle{
+	margin-top:15px;
+}
+.am-close1 {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 0px;
+	right: 6px;
+}
+.am-close1 img{
+	width: 18px;
+}
+
+.am-modal-dialog{position: relative;}
+.foot{position: absolute;bottom: 0;width: 100%;}
+
+
+
+.t-saleTicketBtn{
+    width: 50%;
+	background-color: white;
+	border-color: #D5D5D5;
+	color: black;
+    display: inline-block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.t-saleTicketBtn2{
+    background-color:#F50;
+    color:#FFFFFF;
+}
+/*layer*/
+.layerChange{z-index: inherit !important;}
+.layerChange1{z-index: 999999999 !important;}
+
+
+
+.m-footer{
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer1{
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer2{
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer3{
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer4{
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer5{
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer6{
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer7 {
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer8 {
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-footer9{
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    width: 100%;
+}
+.m-left-1{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-1{
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.m-left-2{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-2{
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.m-left-3{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-3{
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.m-left-4{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-4{
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.m-left-5{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-5{
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.m-left-6{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-6{
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.m-left-7{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-7{
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.m-left-8{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-8 {
+    float: right;
+    text-align: center;
+    width: 49%;
+
+}
+.m-left-9{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-9 {
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.m-left-10{
+    float: left;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #D5D5D5;
+}
+.m-right-10{
+    float: right;
+    text-align: center;
+    width: 49%;
+}
+.t-footChose{width: 33%;}
+.disn{display: none !important;}
+.t-ticketStyleLi{
+    width: 25%;
+    list-style: none;
+    height: 45px;
+    background-color: white;
+    text-align: center;
+    line-height: 45px;
+    float: left;
+}
+.hide{display: none !important;}

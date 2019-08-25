@@ -1,0 +1,53 @@
+﻿body{
+    background: #EFEFEF  url("../img/bti_bg.JPG") no-repeat center;width: 100%;
+    padding-top:25%;
+}
+.bti-body{padding:0 5%;opacity: 0.9;}
+.bti-userInfo{padding:9px 3% 15px;border-radius: 10px;color: #404040;background-color: #FFFFFF;margin-bottom: 20px;}
+.bti-userInfoP{line-height: 40px;border-top: 1px solid #EFEFEF;font-size: 14px;padding: 2.5px 0}
+.bti-userInfoP input[type="text"]{border:0;height: 40px;line-height: 40px;font-size: 14px;width: 70%}
+.bti-userInfoP input[type="tel"]{border:0;height: 40px;line-height: 40px;font-size: 14px;width: 70%}
+.bti-userInfoPT{display: inline-block;width: 25%;float:left;height: 40px;}
+.bti-userInfoPLast{border-bottom: 1px solid #EFEFEF;}
+.bti-activeTime{font-size: 13px;}
+
+.bti-enter{
+    display: inline-block;
+    color: #FFFFFF;
+    height: 40px;line-height: 40px;width: 80%;margin:15px auto 0;text-align: center;
+    border-radius: 30px;
+    border:0;
+    /*渐变*/
+    background-image: -webkit-radial-gradient(circle,#6594FE,#296BFF);
+    background-image: radial-gradient(circle,#6594FE,#296BFF);
+    font-size: 15px;
+}
+.bti-userInfoT{width: 100%;text-align: center;font-size: 15px;font-weight: bold;margin-bottom: 10px;}
+/*备注*/
+.bti-textareaRemark{border: 0;height: 50px;width: 70%;line-height: 18px;font-size: 12px;margin-top: 8px;}
+
+.bti-clickQeCode{font-size: 12px;color: #b1b1b1}
+.bti-code{
+    width: 25%;
+    position: absolute;
+    top: 5px;
+    right: 3%;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #22bb62;
+    font-size: 12px;
+    height: 30px;
+}
+.bti-userInfoP{position: relative;}
+.bti-inputCode{
+    width: 45% !important;
+}
+.bigImg{
+    position: absolute;
+    top:0;
+}
+.in-code{text-align: center;}
+.in-code>p{width: 120px;margin:auto}
+.bti-activeName{
+
+}

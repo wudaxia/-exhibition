@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下级管理</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../base/css/bootstrap-switch.css"/>
+		<link rel="stylesheet" href="../base/css/amazeui.min.css" />
+		<link rel="stylesheet" href="../base/css/layui.css" />
+		<link rel="stylesheet" href="../css/headerAndFooter.css" />
+		<link rel="stylesheet" href="../css/activeList.css" />
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../base/js/bootstrap-switch.js"></script>
+		
+		<script type="text/javascript" src="../base/js/amazeui.min.js" ></script>
+		<script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js" ></script>
+		<script type="text/javascript" src="../js/Function.js" ></script>
+      
+		<script type="text/javascript" src="../js/wxReturn.js" ></script>
+		<script type="text/javascript" src="../js/template.js"></script>
+        <script type="text/javascript" src="../js/activeList.js" ></script>
+
+<style>
+	label{
+		display: block;
+	}
+</style>
+    </head>
+    <body>
+    <div class="my-sectionTitle">
+        <ul class="my-sectionTitleUl">
+            <!--<li class="my-sectionTitleLi my-sectionTitleLiChose" data-id="0" onclick="choseState(this)">全部</li>-->
+            <li class="my-sectionTitleLi my-sectionTitleLiChose" data-id="1" onclick="choseState(this)">申请中</li>
+            <li class="my-sectionTitleLi" data-id="2" onclick="choseState(this)">已审核</li>
+            <li class="my-sectionTitleLi" data-id="3" onclick="choseState(this)">已拒绝</li>
+            <li class="my-sectionTitleLi" data-id="4" onclick="choseState(this)">已禁用</li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+	<div id="wrapper">
+		<div id="scroller">
+			<ul id="thelist">
+
+			</ul>
+			<div class="loadBox"></div>
+		</div>
+	</div>
+
+		<!--<div  class="m-main">-->
+		<!--票的种类-->
+		<!--<div class="m-type">-->
+			<!--<span class="m-left">2-10</span>-->
+			<!--<span class="m-right">审核通过</span>-->
+			<!--<div class="clear"></div>-->
+		<!--</div>-->
+		<!--&lt;!&ndash;内容票&ndash;&gt;-->
+		<!--<div class="m-cont"  onclick="tz(this)">-->
+		   	 <!--<div class="inputtype disn">-->
+		    	<!--<input type="checkbox" checked="checked" />-->
+		    <!--</div>-->
+			<!--<img  class="al-userImg" src="../img/img_01.jpg"/>-->
+			<!--<div class="m-cont-text">-->
+				<!--<p class="ac-name-w">微信用户</p>-->
+				<!--<p class="m-cont-text1">邀请功能</p>-->
+			<!--</div>-->
+            <!--<div class="an-btn">-->
+                <!--<input name="status" type="checkbox" data-size="small" id="status1" class="switch-mini " checked>-->
+            <!--</div>-->
+		<!--</div>-->
+	<!--提示加载完成-->
+
+
+	<!--取票购票-->
+	<div class="m-footer" data-id="1">
+        <div class="m-left-1 m-Start" onclick="goback(this)">返回</div>
+		<div class="m-left-1 m-Start" onclick="goDtata(this)">导出名单</div>
+		<div class="m-right-1 m-Start" onclick="batchs(this)">操作</div>
+		<!--<div class="m-left-1 m-Start" onclick="sx()">筛选</div>-->
+	</div>
+	<div class="m-footer disn" data-id="11">
+		<div class="m-left-1" onclick="noChose(this)">取消</div>
+		<div class="m-right-1" onclick="next(this)">下一步</div>
+		<div class="m-left-1" onclick="batchProcess()">批量选择</div>
+	</div>
+	<!--选中后状态-->
+	<div class="m-footer disn" data-id="111">
+			<div class="m-left-3"  onclick="noChose1(this)">取消</div>
+			<div class="m-right-3" onclick="next()">下一步</div>
+		</div>
+	</body>
+</html>

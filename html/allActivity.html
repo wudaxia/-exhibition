@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>查看活动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../base/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../base/css/base.css" />
+    <link rel="stylesheet" href="../css/headerAndFooter.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/allActivity.css" />
+    <script type="text/javascript" src="../assets/js/jquery.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js?v=2017.6.22"></script>
+    <script type="text/javascript" src="../js/Function.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/template.js?v=2017.6.20"></script>
+    <script type="text/javascript" src="../js/allActivity.js?v=2017.6.23"></script>
+</head>
+<body>
+<!--导航轮播-->
+<!-- <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+  <ul class="am-slides">
+    <li><img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
+    <li><img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
+  </ul>
+</div>-->
+<!--轮播结束-->
+<!--标题栏-->
+<!--<div class="index-title">
+     <div class="index-left">
+     	<img src="../img/img.png" height="30">
+        <span class="index-t1">特色体验</span><br />
+        <span class="index-t2">这将是一场快乐的旅行</span>
+     </div>
+	<div class="index-right">
+		<span class="index-t3">更多></span>
+	</div>
+</div>-->
+<!--标题栏结束-->
+
+<!--<div class="clear"></div>-->
+
+<!--活动列表-->
+<div id="wrapper">
+    <div id="scroller">
+        <ul id="thelist">
+
+        </ul>
+        <div class="loadBox"></div>
+    </div>
+</div>
+<!--<div class="index-main">-->
+    <!--<div class="index-left-text">-->
+        <!--<div class="index-t">-->
+            <!--<div>-->
+                <!--<img class="am-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="40" height="40"/>-->
+            <!--</div>-->
+            <!--<div class="index-t2-1">-->
+                <!--<span class="index-t2-2">詹佳瑶</span><br />-->
+                <!--<span class="index-t2-3">宁波 | 会展中心</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="index-f">-->
+            <!--<div class="index-img"><img src="../img/chakan.png"><a href=""><span class="look-detail">查看活动主页</span></a></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="index-right-image">-->
+        <!--<img class="am-radius" alt="140*140" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"  />-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="index-main">-->
+    <!--<div class="index-left-text">-->
+        <!--<div class="index-t">-->
+            <!--<div>-->
+                <!--<img class="am-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="40" height="40"/>-->
+            <!--</div>-->
+            <!--<div class="index-t2-1">-->
+                <!--<span class="index-t2-2">詹佳瑶</span><br />-->
+                <!--<span class="index-t2-3">宁波 | 会展中心</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="index-f">-->
+            <!--<div class="index-img"><img src="../img/chakan.png"><a href=""><span class="look-detail">查看活动主页</span></a></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="index-right-image">-->
+        <!--<img class="am-radius" alt="140*140" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"  />-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="index-main">-->
+    <!--<div class="index-left-text">-->
+        <!--<div class="index-t">-->
+            <!--<div>-->
+                <!--<img class="am-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="40" height="40"/>-->
+            <!--</div>-->
+            <!--<div class="index-t2-1">-->
+                <!--<span class="index-t2-2">詹佳瑶</span><br />-->
+                <!--<span class="index-t2-3">宁波 | 会展中心</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="index-f">-->
+            <!--<div class="index-img"><img src="../img/chakan.png"><a href=""><span class="look-detail">查看活动主页</span></a></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="index-right-image">-->
+        <!--<img class="am-radius" alt="140*140" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"  />-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="index-main">-->
+    <!--<div class="index-left-text">-->
+        <!--<div class="index-t">-->
+            <!--<div>-->
+                <!--<img class="am-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="40" height="40"/>-->
+            <!--</div>-->
+            <!--<div class="index-t2-1">-->
+                <!--<span class="index-t2-2">詹佳瑶</span><br />-->
+                <!--<span class="index-t2-3">宁波 | 会展中心</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="index-f">-->
+            <!--<div class="index-img"><img src="../img/chakan.png"><a href=""><span class="look-detail">查看活动主页</span></a></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="index-right-image">-->
+        <!--<img class="am-radius" alt="140*140" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"  />-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="index-main">-->
+    <!--<div class="index-left-text">-->
+        <!--<div class="index-t">-->
+            <!--<div>-->
+                <!--<img class="am-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="40" height="40"/>-->
+            <!--</div>-->
+            <!--<div class="index-t2-1">-->
+                <!--<span class="index-t2-2">詹佳瑶</span><br />-->
+                <!--<span class="index-t2-3">宁波 | 会展中心</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="index-f">-->
+            <!--<div class="index-img"><img src="../img/chakan.png"><a href=""><span class="look-detail">查看活动主页</span></a></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="index-right-image">-->
+        <!--<img class="am-radius" alt="140*140" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"  />-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="index-main">-->
+    <!--<div class="index-left-text">-->
+        <!--<div class="index-t">-->
+            <!--<div>-->
+                <!--<img class="am-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="40" height="40"/>-->
+            <!--</div>-->
+            <!--<div class="index-t2-1">-->
+                <!--<span class="index-t2-2">詹佳瑶</span><br />-->
+                <!--<span class="index-t2-3">宁波 | 会展中心</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="index-f">-->
+            <!--<div class="index-img"><img src="../img/chakan.png"><a href=""><span class="look-detail">查看活动主页</span></a></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="index-right-image">-->
+        <!--<img class="am-radius" alt="140*140" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"  />-->
+    <!--</div>-->
+<!--</div>-->
+<!--主体部分结束-->
+<div class="clear"></div>
+
+<div class="footer texC">
+    <div  class="am-navbar" id="">
+        <ul class="am-navbar-nav am-cf am-avg-sm-3">
+            <li>
+                <a href="index1.html" class="">
+                    <span class="am-navbar-label" ><img src="../img/shouye.png">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="allActivity.html" class="">
+                    <span class="am-navbar-label active"><img src="../img/xiaoxi2.png">活动</span>
+                </a>
+            </li>
+            <!--<li>
+                <a href="order.html" class="">
+                    <span class="am-navbar-label"><img src="../img/product.png">订单</span>
+                </a>
+            </li>-->
+            <li>
+                <a href="personalCenter.html" class="">
+                    <span class="am-navbar-label "><img src="../img/my.png">我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿body{
+    background: #EFEFEF  url("../img/bti_bg.JPG") no-repeat center;width: 100%;
+    padding-top:45%;
+}
+.bti-body{padding:0 5%;opacity: 0.9;}
+.bti-userInfo{padding:9px 3% 15px;border-radius: 10px;color: #404040;background-color: #FFFFFF;margin-bottom: 20px;}
+.bti-userInfoP{line-height: 40px;border-top: 1px solid #EFEFEF;font-size: 14px;padding: 2.5px 0;}
+.bti-userInfoP input[type="text"]{border:0;height: 40px;line-height: 40px;font-size: 16px;width: 70%}
+.bti-userInfoPT{display: inline-block;width: 25%;float:left;height: 40px;}
+.bti-userInfoPLast{border-bottom: 1px solid #EFEFEF;}
+
+.bti-enter{color: #FFFFFF;display:inline-block;
+    height: 40px;line-height: 40px;width: 80%;margin:15px auto 0;text-align: center;
+    border-radius: 30px;
+    border:0;
+    /*渐变*/
+    background-image: -webkit-radial-gradient(circle,#6594FE,#296BFF);
+    background-image: radial-gradient(circle,#6594FE,#296BFF);
+    font-size: 15px;
+}
+.bti-userInfoT{width: 100%;height: 30px;text-align: center;margin-bottom: 5px;font-size: 15px;font-weight: bold;}
+.bti-activTime{font-size: 13px;}

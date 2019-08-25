@@ -1,0 +1,43 @@
+body{
+background-color: #ECECEC;
+}
+.us-head{
+    height: 63px;
+    line-height: 48px;
+    margin: 11px auto;
+}
+.us-info{
+    height: 52px;
+    line-height: 36px;
+    border-bottom: 1px solid #E0E3E4;
+}
+.us-right{
+    float: right;
+    margin-top: -4px;
+}
+.us-headimg{
+    width: 52px;
+    height: 52px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.us-more{
+    width: 16px;
+    height: 16px;
+}
+.us{
+    background-color: #fff;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #000;
+}
+.us-content{
+    background-color: #fff;
+}
+.us-nickname{
+    line-height: 44px;
+    height: 40px;
+    font-size: 16px;
+    margin-right: 10px;
+}

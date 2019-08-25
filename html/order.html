@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>售票管理</title>
+		<link rel="stylesheet" href="../base/css/amazeui.min.css" />
+		<link rel="stylesheet" href="../css/order.css" />
+	</head>
+	<body>
+			<!--标题栏-->
+	   <!--<div class="m-title">
+       <span class="m-t1"> &lt; 返回</span>	
+       <span class="m-t2">订单管理</span>
+		</div>
+		<div class="clear"></div>-->
+		<!--导航栏-->
+			<div>
+				<ul>
+					<li class="all lic_1" onclick="dj1()"><a href="#">全部</a></li>					
+					<li class="ready"><a href="#" onclick="dj2()">待参与</a></li>					
+					<li class="finish"><a href="#" onclick="dj3()">已完成</a></li>
+				</ul>       				
+			</div>
+			<div class="clear"></div>
+			<!--内容栏-->
+			<div id="main" >
+			<div  class="o-con">
+				订单编号:1101845545   <span id="o-con-text">&emsp;&emsp;待参与</span><br />
+			</div>
+			<div class="o-con1">
+				共1张票 合计￥0.00
+			</div>
+			</div>
+				<!--内容栏-->
+			<div id="main1">	
+			<div  class="o-con">
+				订单编号:1101845545   <span id="o-con-text">&emsp;&emsp;已完成</span><br />
+			</div>
+			<div class="o-con1">
+				共1张票 合计￥0.00
+			</div>
+			</div>
+			<div class="am-footer">已全部加载</div>
+	</body>
+	<script type="text/javascript" src="../assets/js/jquery.min.js" ></script>
+	<script>
+		function dj2(){	
+			$(".all").removeClass("lic_1");
+			$(".finish").removeClass("lic_1");
+			$(".ready").addClass("lic_1");
+			$("#main1").css("display","none");
+			$("#main").css("display","block");
+		}
+		function dj1(){
+			$(".all").addClass("lic_1");
+			$(".finish").removeClass("lic_1");
+			$(".ready").removeClass("lic_1");
+		$("#main1").css("display","block");
+			$("#main").css("display","block");
+		
+		}
+		function dj3(){
+			$(".all").removeClass("lic_1");
+			$(".finish").addClass("lic_1");
+			$(".ready").removeClass("lic_1");
+			$("#main").css("display","none");
+				$("#main1").css("display","block");
+		}
+	</script>
+</html>

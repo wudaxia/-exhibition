@@ -1,0 +1,80 @@
+body{position: inherit;}
+
+
+
+/*logo*/
+.p-logo{width: 100%;height: 47px;background-color: #009A44;line-height: 40px;}
+.p-logo img{height: 25px;vertical-align: middle;margin-left: 7.5%;}
+.p-logoWord{color: #FFFFFF;line-height: 47px;margin-left: 10%;float: right;margin-right: 7.5%}
+.p-logo a,.p-logoWord{color:#FFFFFF}
+.p-logoWord{color: #009A44;line-height: 40px;display: inline-block;float: right}
+.p-logoWord2{float: right;}
+.p-logoWordImg{line-height: 38px;margin-right: 5px;}
+.p-logoWords{line-height: 40px;}
+/*µ¼º½*/
+footer{height: 49px;}
+.i-nav{height: 49px;position: fixed;bottom: 0;background-color: #FAFAFA;text-align: center;line-height: 49px; color: #4B4B4B}
+.i-nav a{ color: #4B4B4B;display: inline-block;width: 100%;}
+.i-navWidthOne{width: 11.5%;line-height: 5px;}
+.i-navWidthTow{width: 29.5%}
+.i-navTd{border-right: 1px #D2D2D2 solid;}
+.i-navWidthOne img{height: 25px;width: 25px;}
+.i-navTdP img{ width: 13px;height: 13px;margin-right: 3%;margin-top: -4px;}
+.i-navTdP{position: relative;}
+.i-navTdP ul{padding: 0;margin: 0;border-radius: 5px;border:1px #CFCFCF solid;background-color: #FAFAFA;display: none}
+.i-navLiP{position: absolute;top: -145px;left: 12%;width: 72.3%;}
+.i-navLiP li{height: 43px;padding: 0;margin: 0;}
+.i-navLiP1{border-bottom: 1px #CACACA solid}
+.i-navDown{position:relative; }
+.i-navDown img{position: absolute;width: 35px;height: 40px;z-index: 100;top: -15px;left: 30%;}
+
+
+.l-title{height: 40px;width: 100%;font-size: 1.2em}
+.l-prve{position: absolute;left: 20px;width: 29px;height: 29px;top: 5px;}
+.l-login-T{height: 40px;line-height: 40px;background: #FFFFFF;}
+.l-phone1,.l-admission{width: 100%;display: inline-block;text-align: center;}
+.l-login-B{overflow-x: hidden;}
+.l-login{left: 0px;top: 0;width: 100%}
+.av-login{top: 0;left:1000px;width: 100%}
+.l-login,.av-login{text-align: center;}
+.l-user,.l-pass,.l-getPass,.l-enter,.av-user,.av-pass,.av-getPass,.av-enter{border:0;padding-left:50px;height: 27px;font-size:1em;line-height: 27px;  }
+
+.l-user,.av-user{background: url("../img/iphone.png") no-repeat 4% 65%  #FFFFFF;}
+.l-pass,.av-pass{background: url("../img/pass.png") no-repeat 4% 52%  #FFFFFF;}
+.lUser,.lPass,.avUser,.avPass{position: relative;}
+.l-user,.av-user{border-top-left-radius: 5px;border-top-right-radius:5px;}
+.l-pass,.av-pass{border-bottom-left-radius:5px; border-bottom-right-radius:5px;}
+.l-user,.l-pass,.av-user,.av-pass{width:100%; margin-top:9px}
+.l-getPass,.av-getPass{top:5px;right:8%;font-size:0.9em;height:35px;line-height:35px;width:90px;position:absolute;padding-left:0;border: 1px #6AD195 solid; border-radius:5px;background: #FFFFFF;}
+.l-enter,.av-enter{border-radius:3px;width: 90%;background-color:#22BB62;color: #FFFFFF;padding-left: 0;font-size: 1.2em;margin-top: 20px;height: 40px;line-height: 40px;}
+.l-enterWord,.av-enterWord{font-size: 0.9em;color: #B0B0B0}
+.l-other,.av-other{height: 160px;width: 100%}
+.l-line,.av-line{display: inline-block;height: 1px;width: 35%;background: #D7D7D7;margin-top: 15px;}
+.l-lineWord,.av-lineWord{display: inline-block;color:#787878;}
+.l-otherImg,.av-otherImg{margin-top: 15px;height: 50px;width: 50px;}
+.l-border{border-bottom:1px solid #22BB62;}
+.l-border2{border-bottom:1px solid #E5E5E5;}
+.av-other{position: fixed;bottom: 0;}
+.fixfixed.navbar-fixed-top {
+    position: absolute;
+}
+.l-loginPrompt{width: 100%;height:20px;text-align: center;line-height:20px;}
+.loginPromptWord{height:80px;color: red;text-align: left;padding: 0 20px;margin-top:10px;}
+.l-bottom{padding: 0 20px;font-size: 0.9em;margin: auto;color: #B0B0B0;margin-top: 20px;}
+.l-bottom1Body{margin-left:22px;}
+.l-loginPromptWord{text-indent:2em}
+.l-gzh{padding: 0 20px;text-align: center;font-size: 1em;margin-top: 20px;margin-bottom: 20px;}
+.l-gzh img{height: 200px;width: 200px;margin-bottom: 10px;}
+
+.l-inputbox{height:45px; width:90%; margin:auto; background-color:#FFF; vertical-align:middle}
+
+.l-inputbox  {border-bottom: 1px #ECECEC solid;}
+.p-logo{background-color: #FFFFFF;border-bottom: 1px #009A44 solid}
+.p-logo a{color: #009A44}
+.p-logoWord{color: #009A44;line-height: 40px;display: inline-block;float: right}
+.p-logoWord2{float: right;}
+.p-logoWordImg{line-height: 38px;margin-right: 5px;}
+.p-logoWords{line-height: 40px;}
+
+
+

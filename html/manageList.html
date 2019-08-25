@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>活动管理列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../base/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../base/css/base.css" />
+    <link rel="stylesheet" href="../css/headerAndFooter.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/manageList.css" />
+    <script type="text/javascript" src="../assets/js/jquery.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js?v=2017.6.22"></script>
+    <script type="text/javascript" src="../js/Function.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/template.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/wxReturn.js?v=2017.6.9"></script>
+    <script src="../js/manageList.js"></script>
+</head>
+<body>
+<div class="my-section">
+    <div class="my-sectionTitle">
+        <ul class="my-sectionTitleUl">
+            <li class="my-sectionTitleLi my-sectionTitleLiChose" data-id="0" onclick="choseState(this)">全部</li>
+            <li class="my-sectionTitleLi" data-id="1" onclick="choseState(this)">申请中</li>
+            <li class="my-sectionTitleLi" data-id="2" onclick="choseState(this)">已审核</li>
+            <li class="my-sectionTitleLi" data-id="3" onclick="choseState(this)">已拒绝</li>
+            <li class="my-sectionTitleLi" data-id="4" onclick="choseState(this)">已禁用</li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <div id="scroller">
+            <ul id="thelist">
+
+            </ul>
+            <div class="loadBox"></div>
+        </div>
+    </div>
+</div>
+<!--活动列表-->
+<!--<div class="index-main">
+	<div class="index-left-text">
+		<div class="index-t">
+			<div>
+				 <img class="am-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="40" height="40"/>
+			</div>
+			<div class="index-t2-1">
+				 <span class="index-t2-2">詹佳瑶</span><br />
+			     <span class="index-t2-3">宁波 | 会展中心</span>
+			</div>
+		</div>
+		<div class="index-f">
+			<div class="index-img fl"><img src="../img/chakan.png"><a href=""><span class="look-detail">详情</span></a></div>
+			<div class="index-img fl"><img src="../img/chakan.png"><a href=""><span class="look-detail">门票</span></a></div>
+		</div>
+	</div>
+	<div class="index-right-image">
+		 <img class="am-radius" alt="140*140" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"  />
+	</div>
+</div>-->
+
+<!--主体部分结束-->
+<div class="clear"></div>
+<!--轮播图-->
+
+<div class="footer texC">
+    <div  class="am-navbar" id="">
+        <ul class="am-navbar-nav am-cf am-avg-sm-3">
+            <li>
+                <a href="index1.html" class="">
+                    <span class="am-navbar-label" ><img src="../img/shouye.png">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="allActivity.html" class="">
+                    <span class="am-navbar-label"><img src="../img/xiaoxi.png">活动</span>
+                </a>
+            </li>
+            <!--<li>
+                <a href="order.html" class="">
+                    <span class="am-navbar-label"><img src="../img/product.png">订单</span>
+                </a>
+            </li>-->
+            <li>
+                <a href="personalCenter.html" class="">
+                    <span class="am-navbar-label active"><img src="../img/my2.png">我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../base/js/jquery-1.7.1.min.js" ></script>
+<script type="text/javascript" src="../base/js/amazeui.min.js" ></script>
+<!--<script type="text/javascript" src="../js/index.js" ></script>-->
+<!--<script>
+        var wid = parseInt(window.innerWidth)-180-20;
+        $(".index-right-image").css("width",wid);
+</script>-->
+</html>

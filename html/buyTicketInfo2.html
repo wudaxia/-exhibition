@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../base/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../base/css/base.css" />
+    <link rel="stylesheet" href="../css/headerAndFooter.css?v=2017.6.8"/>
+    <link href="../css/biaodan.css" rel="stylesheet" type="text/css">
+    <link href="../css/buyTicketInfo2.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../assets/js/jquery.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js?v=2017.6.22"></script>
+    <script type="text/javascript" src="../js/pinchzoom.js?v=2017.6.29"></script>
+    <script type="text/javascript" src="../js/Function.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/template.js?v=2017.6.20"></script>
+    <script type="text/javascript" src="../js/buyTicketInfo2.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <title>完善购卡信息</title>
+</head>
+<script>
+    var actIds="";
+    var partIds="";
+    var ticketIds="";
+    actIds=GetQueryString("actId");
+    partIds=GetQueryString("partId");
+    ticketIds=GetQueryString("ticketId");
+    var url =baseUrl+'buyTicketInfo2.html?actId='+actIds+'&partId='+partIds+'&ticketId='+ticketIds+'';
+    var url2 =location.href.split('#')[0];
+    function configWX()
+    {
+        var data = '{"url":"' + url2 + '","actId":' + actIds + ',"partId":' + partIds + '}';
+        AjaxSubmit("get", JSON.parse(data), basePath + "WxBind/getActivityInfoQrcode", getActivityInfoQrcode_fun);
+    }
+    function getActivityInfoQrcode_fun(res)
+    {
+        console.log(res);
+
+        if(res.result.code=="300")
+        {
+            return;
+
+        }
+        var wxconfig=res.dataPacket.wxConfig;
+        var wxShare = res.dataPacket.wxShare;
+        wx.config({
+            //debug: true,  // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId:wxconfig.AppID, // 必填，公众号的唯一标识
+            timestamp: wxconfig.time, // 必填，生成签名的时间戳
+            nonceStr: wxconfig.noncestr, // 必填，生成签名的随机串
+            signature: wxconfig.sign,// 必填，签名，见附录1
+            jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage","onMenuShareQQ"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.ready(function(){
+            wx.onMenuShareTimeline({
+                title: wxShare.wxtitle, // 分享标题
+                desc: wxShare.wxdesc, // 分享描述
+                link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: wxShare.wximgUrl, // 分享图标
+
+                success: function () {
+                    alert("成功分享")
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+
+
+            });
+            wx.onMenuShareAppMessage({
+                title: wxShare.wxtitle, // 分享标题
+                desc: wxShare.wxdesc, // 分享描述
+                link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl:  wxShare.wximgUrl, // 分享图标
+
+                success: function () {
+                    alert("成功分享")
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareQQ({
+                title: wxShare.wxtitle, // 分享标题
+                desc: wxShare.wxdesc, // 分享描述
+                link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: wxShare.wximgUrl, // 分享图标
+
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+        });
+
+    }
+</script>
+<body>
+<input value="配置0" type="button" id="configWXs" style="display: none" class="hide" onclick="configWX()" />
+<div class="TopBgTitle">
+    <div class="wj_title wj_title2">
+        <p style="text-align: center;" class="wj_titleP"></p>
+    </div>
+    <p  class="bti-clickQeCode hide" style="text-align: center;font-size: 14px;"  onclick="clickQeCode(this)">(点击生成二维码)</p>
+    <div class="in-code"></div>
+    <div class="M_topic maxtop question">
+        <div class="topic_title">活动时间：</div>
+        <div class="btf2-activeTime"></div>
+    </div>
+    <div class="M_topic maxtop question">
+        <div class="topic_title">活动地点：</div>
+        <div class="btf2-activeAdd"></div>
+    </div>
+    <div class="M_topic maxtop question ticketNo">
+        <div class="topic_title">实体卡号：<span class="btf2-ticketNo"></span></div>
+        <!--<div class="btf2-ticketNo"></div>-->
+    </div>
+</div>
+<div class="phone_content">
+    <div class="Phone_zon" id="survey_page">
+        <div class="header clear project_title" id="begin_content">
+            <div class="wjintro mtop desc_begin">
+                <p>请认真填写以下信息，如因个人填写问题产生数据不真实导致的一切罚款请自行承担！</p>
+            </div>
+        </div>
+        <form action="#" method="get" id="doc-vld-msg">
+        <div class="Phone_con" id="question_box">
+            <div class="M_topic maxtop question">
+                <div class="topic_title">申请人</div>
+                <div class="topic_con">
+                    <div class="topic_input topic_input_default">
+                        <input class="option bti2-userName" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="M_topic maxtop question">
+                <div class="topic_title">手机：</div>
+                <div class="topic_con">
+                    <div class="topic_input topic_input_default">
+                        <input class="option bti2-userPhone" type="tel" style=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="M_topic maxtop question bti2-userCode">
+                <div class="topic_title">手机验证码：</div>
+                <div class="topic_con">
+                    <div class="topic_input topic_input_default">
+                        <input class="option bti2-userCodes" type="tel" style=""/>
+                        <span class="bti-code" onclick="event.cancelBubble=true;getPhoneCode()">获取验证码</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="M_topic maxtop question">-->
+                <!--<div class="topic_title">隶属军团</div>-->
+                <!--<div class="topic_con">-->
+                    <!--<div class="topic_input topic_input_default">-->
+                        <!--<input type="text" class="am-form-field" placeholder="请选择日期" data-am-datepicker readonly required />-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="M_topic maxtop question">-->
+               <!--<div class="topic_title">装修预算</div><div class="topic_con checkbox_wrap">-->
+               <!--<div class="related-tip"></div>-->
+               <!--<ul class="unstyled">-->
+                   <!--<li data-id="option_58efb8273fcf576a902e7413">-->
+                       <!--<div class="checked_wrap">-->
+                           <!--<label class="inputLabel"><input type="radio" id="radio-1-1" name="radio-1-set" class="regular-radio"/><label class="regular-radioLabel" for="radio-1-1"></label>完善信息</label>-->
+                       <!--</div>-->
+                   <!--</li>-->
+                   <!--<li data-id="option_58efb8273fcf576a902e7414">-->
+                       <!--<div class="checked_wrap">-->
+                           <!--<label class="inputLabel"><input type="radio" id="radio-1-2" name="radio-1-set" class="regular-radio"/><label class="regular-radioLabel" for="radio-1-2"></label>完善信息</label>-->
+                       <!--</div>-->
+                   <!--</li>-->
+               <!--</ul>-->
+           <!--</div>-->
+           <!--</div>-->
+            <!--<div class="M_topic maxtop question">-->
+                <!--<div class="topic_title">装修预算</div><div class="topic_con checkbox_wrap">-->
+                <!--<div class="related-tip"></div>-->
+                <!--<ul class="unstyled">-->
+                    <!--<li data-id="option_58efb8273fcf576a902e7413">-->
+                        <!--<div class="checked_wrap">-->
+                            <!--<label class="inputLabel"><input type="checkbox" id="checkbox-1-1" class="regular-checkbox a-default" /><label for="checkbox-1-1" class="inputLable"></label>完善信息</label>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li data-id="option_58efb8273fcf576a902e7414">-->
+                        <!--<div class="checked_wrap">-->
+                           <!--<label class="inputLabel"><input type="checkbox" id="checkbox-1-2" class="regular-checkbox a-default" /><label for="checkbox-1-2" class="inputLable"></label>完善信息</label>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="M_topic maxtop question">-->
+                <!--<div class="topic_title">图片上传</div><div class="topic_con checkbox_wrap">-->
+                <!--<div class="related-tip"></div>-->
+                <!--<ul class="unstyled">-->
+                    <!--<li data-id="option_58efb8273fcf576a902e7413">-->
+                        <!--<div class="checked_wrap" id="photoList">-->
+                            <!--<input type="file" id="#inputFile" class="hide"/>-->
+                            <!--<div id="subImg">-->
+                                <!--<img id="chooseImg" class="e-join" src="../img/15.png" onClick="subFile()" />-->
+                                <!--<img id="deleteImg" class="e-imgExit" src="../img/14.png" onClick="deleteImgF(this)"/>-->
+                            <!--</div>-->
+                            <!--<form id="seekHelpForm" hidden="">-->
+                                <!--<input name="photos" onchange="imgSave(this)" id="inputFile" class="hide" type="file" accept="img/*" multiple=""/>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+        </form>
+    </div>
+    <div class="Phone_bon" id="control_panel">
+        <span class="bti2-enter"  onclick="saveData(this)">提交</span>
+    </div>
+</div>
+<input type="button" value="关闭本窗口" onclick="WeixinJSBridge.call('closeWindow');" class="hide closeWX"/>
+</body>
+</html>

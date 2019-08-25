@@ -1,0 +1,113 @@
+body{
+    background-color:#f7faf8
+}
+.header{
+    width: 100%;
+    height: 209px;
+    /*background-image: url("../img/pe-bgimg.png");*/
+    background-color:#22bb62;
+    background-size: 100%;
+    overflow: hidden;
+    /*padding-bottom: 20px;*/
+}
+.pe-bell-o{
+    overflow: hidden;
+    height: 50px;
+}
+.pe-bell{
+    margin-right: 40px;
+}
+.pe-bell img{
+   width: 21px;
+    height: 21px;
+}
+.pe-login{
+    font-size: 15px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin: 10px 0 0;
+    color:#FFFFFF ;
+    padding-left: 5px;
+}
+.pe-bgBox{
+   /* background-color:#f7faf8 ;*/
+/*   margin-bottom: 60px;*/
+    position: relative;
+}
+.pe-bgBox:after{
+    clear: both;
+    height: 0;
+    content: "";
+    overflow: hidden;
+}
+.content{
+    position: absolute;
+    top: -26px;
+    background-color: #fff;
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+    /*margin-top: -30px;*/
+    border-radius: 5px;
+    /*border: 1px solid #3c3c3c;*/
+    box-shadow:0px 0px 1px #E0E3E4;
+}
+.content a{
+    display:block;
+}
+.am-u-sm-4 img{
+    width: 36px;
+    height: 36px;
+}
+.am-u-sm-4 p{
+    margin-top:6px;
+    height: 25px;
+    overflow: hidden;
+    font-size: 15px;
+}
+.content ul li {
+    margin: 28px 0px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+[class*=am-u-] {
+     padding-left: 0rem;
+   padding-right: 0rem;
+}
+.content ul>a:after{
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    content: "";
+}
+
+.pc-num1, .pc-num2, .pc-num3, .pc-num4, .pc-num5,.pc-num6, .pc-num7, .pc-num8, .pc-num9{
+    text-align: center;
+    top: -4px;
+    left: 55%;
+    background-color: #FFFFFF;
+    z-index: 5;
+    width: 21px;
+    position: absolute;
+    border-radius: 50%;
+    line-height: 19px;
+    color: red;
+    border: 2px red solid;
+    font-weight: bold;
+    font-size: 14px;
+    height: 21px;
+    display: inline-block;
+}
+/*.pc-pluses{
+    position: relative;
+}
+.pc-plus{
+    font-size: 20px;
+    position: absolute;
+    right: -6px;
+    top: -8px;
+}*/
+.pc-headImg{width: 64px;height: 64px;border-radius: 50%;}
+.pc-userVip{font-size: 12px;color: #FFFFFF;}
+

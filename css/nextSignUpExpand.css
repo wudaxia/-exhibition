@@ -1,0 +1,113 @@
+body {
+    position: relative;
+    margin: 0;
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    color: #474b51;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+}
+input[type="checkbox"]{-webkit-appearance:checkbox;margin: 0;}
+input[type="radio"]{-webkit-appearance:radio;margin: 0;}
+.page-form-view {
+    background-color: #f5f7fa;
+}
+.x-form {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 4px 3.2px;
+}
+.x-form .f-line {
+    padding: 3%;
+}
+.x-form .f-label {
+    line-height: 18px;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.x-form .f-required {
+    padding-left: 4px;
+    color: #ed5565;
+}
+.nsue-inputText {
+    line-height: normal;
+    width: 100%;
+    background: #fff;
+    border-color: #fff;
+    border-radius: 2px;
+    transition: border-color;
+    transition-duration: .3s;
+    padding: 12px 4.8px;
+}
+
+.x-form-footer.separator {
+    border-top: dashed 1px #ddd;
+}
+.x-form-footer {
+    position: relative;
+    overflow: hidden;
+}
+.x-btn-pane .nav-item {
+    position: relative;
+    float: left;
+    left: 0;
+    width: 100%;
+    padding: 4px;
+}
+.x-btn-pane .nav-item>.x-btn {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;}
+.x-btn.style-blue {
+    color: #fff;
+    background: #49a1f3;
+}
+.x-btn {
+    border-radius: 4px;
+    -webkit-user-select: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    transition: background .5s;
+    font-size: 16px;
+    -webkit-appearance: none;
+}
+.nsue-inputText {
+    font-size: 13px;
+    -webkit-appearance: none;
+}
+.nsue-inputText{
+    color: #474b51;
+    font-family: sans-serif;
+    margin: 0;
+    outline: 0;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+.x-form .f-description.separator {
+    border-top: dashed 1px #ddd;
+}
+.x-form .f-description {
+    font-size: 10px;
+    color: #979daa;
+}
+.x-subhtml {
+    padding: 5px 0;
+    line-height: 14px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.nse-Title{font-size:18px;text-align: center;line-height: 30px;padding: 5px 0;}
+.x-form-footer{margin-top: 10px;padding-top: 5px;}
+.nsue-radios{display: inline-block;margin-right: 5px;margin-bottom: 5px;}
+.nsue-radiosWord{margin-left: 3px;}
+.am-modal-dialog{font-size: 16px;}
+.nued-radio{height: 18px;width: 18px;}

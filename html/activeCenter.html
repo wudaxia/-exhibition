@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>活动管理</title>
+		<link rel="stylesheet" href="../base/css/amazeui.min.css" />
+		<link rel="stylesheet" href="../css/headerAndFooter.css" />
+		<link rel="stylesheet" href="../css/activeCenter.css" />
+		<script type="text/javascript" src="../assets/js/jquery.min.js?v=2017.6.9"></script>
+		<script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.6.9"></script>
+		<script type="text/javascript" src="../js/Function.js?v=2017.6.9"></script>
+		<script type="text/javascript" src="../js/template.js?v=2017.6.9"></script>
+		<script type="text/javascript" src="../js/wxReturn.js"></script>
+		<script type="text/javascript" src="../js/activeCenter.js?v=2017.6.22"></script>
+		<style>
+			a{
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--标题栏-->
+		<!--<div class="m-title">
+       <span class="m-t1"> &lt; 返回</span>	
+       <span class="m-t2">活动管理</span>
+       <span class="m-t3">查看活动</span>
+		</div>-->
+			<div class="clear"></div>
+		<!--数量显示-->
+		<div class="p-ms"> 
+		<ul>
+			<li class="ac-activePeople">1</li>
+			<li class="ac-activeSale">14</li>
+			<li class="ac-activeVisit">1</li>
+		</ul>
+		<br />
+		<ul>
+			<li>报名</li>
+			<li>售卡</li>
+			<li>访问量</li>
+		</ul>
+		</div>
+		<div class="clear"></div>
+		<!--内容主页-->
+		<div class="p-con">
+			<div class="p-con1" onclick="goActiveDetails(this)">
+				<i class="am-icon-file-text-o"></i><br />查看活动
+			</div>
+			<div class="p-con1 ac-ticketList" onclick="goOtherPage(this)">
+				<i class="am-icon-ticket"></i><br />门票管理
+			</div>
+			<div class="p-con1 ac-applylist"onclick="goOtherPage(this)">
+				<i class="am-icon-hand-paper-o"></i><br />报名管理
+			</div>
+		</div>
+			<div class="p-con2 ac-nextManageList" onclick="goOtherPage(this)">
+				<i class="am-icon-user"></i><br />下级管理
+			</div>
+		</div>
+		<div class="p-con">
+			<div class="p-con2 ac-nextInviteCode" onclick="goOtherPage(this)">
+				<i class="am-icon-qrcode"></i><br />下级二维码
+			</div>
+			<div class="p-con2 ac-userInviteCode" onclick="goOtherPage(this)">
+				<i class="am-icon-qrcode"></i><br />用户二维码
+			</div>
+			<div class="p-con2 ac-userInviteUrl" onclick="goOtherPage(this)">
+				
+				<i class="am-icon-link"></i><br />用户报名
+			</div> 
+			<div class="p-con2 hide">
+				<i class="am-icon-list-alt"></i><br />数据分析
+			</div>
+			<div class="p-con2 ac-nextInviteUrl hide" onclick="goOtherPage(this)">
+				<i class="am-icon-link"></i><br />下级报名
+			</div>
+            <div class="p-con2 ac-nextUserInfoUrl" onclick="goOtherPage(this)">
+                <i class="am-icon-link"></i><br />活动信息维护
+            </div>
+		</div>
+
+		<div class="footer texC">
+			<div  class="am-navbar" id="">
+				<ul class="am-navbar-nav am-cf am-avg-sm-3">
+					<li>
+						<a href="index1.html" class="">
+							<span class="am-navbar-label" ><img src="../img/shouye.png">首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="allActivity.html" class="">
+							<span class="am-navbar-label"><img src="../img/xiaoxi.png">活动</span>
+						</a>
+					</li>
+					<!--<li>
+                        <a href="order.html" class="">
+                            <span class="am-navbar-label"><img src="../img/product.png">订单</span>
+                        </a>
+                    </li>-->
+					<li>
+						<a href="personalCenter.html" class="">
+							<span class="am-navbar-label active"><img src="../img/my2.png">我的</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+<div class="in-code disn"></div>
+</html>

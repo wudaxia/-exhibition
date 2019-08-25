@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下级管理详细</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!--<meta name="format-detection" content="telephone=no" />-->
+		<link rel="stylesheet" href="../base/css/amazeui.min.css" />
+		<link rel="stylesheet" href="../css/activeDetail.css" />
+		<link rel="stylesheet" href="../base/css/bootstrap-switch.css"/>
+		<link rel="stylesheet" href="../css/headerAndFooter.css"/>
+		<script type="text/javascript" src="../assets/js/jquery.min.js" ></script>
+        <script type="text/javascript" src="../assets/js/amazeui.min.js" ></script>
+		<script type="text/javascript" src="../base/js/bootstrap-switch.js"></script>
+        <script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js" ></script>
+		<script type="text/javascript" src="../base/js/template.js"></script>
+		<script type="text/javascript" src="../js/Function.js"></script>
+		<script type="text/javascript" src="../js/template.js"></script>
+		<script type="text/javascript" src="../js/wxReturn.js" ></script>
+		<script type="text/javascript" src="../js/activeDetail.js"></script>
+
+
+	</head>
+	<body>
+	
+		<!--标题栏-->
+		<!--<div class="m-title">
+       <span class="m-t1"> &lt; 返回</span>	
+       <span class="m-t2">下级详情</span>
+		</div>-->
+		<!--票的种类-->
+		<div class="m-type">
+			<span class="m-left">2-10</span>
+			<span class="m-right">审核通过</span>
+		</div>
+	
+		<!--内容票-->
+		<div class="m-cont">
+			<!--<div id="m-cont-text">-->
+				<!--<span id="ac-wxname">微信用户</span><br />-->
+				<!--<span class="m-cont-text1">允许开放下级|是否禁用</span>-->
+				<!--&lt;!&ndash;<span class="m-cont-money">开/关</span>&ndash;&gt;-->
+				<!--&lt;!&ndash;<button type="button" class="am-btn am-btn-default am-round am-btn-xs kf" onclick="change()">开放</button>&ndash;&gt;-->
+				<!--<div class="an-btn">-->
+					<!--<input name="status" type="checkbox" data-size="small" id="status1" class="switch-mini " checked>-->
+				<!--</div>-->
+			<!--</div>-->
+		</div>
+      <!--票的详细内容-->
+        <div class="a-cont-c">
+            <div>
+                <span class="ad-wxName">微信昵称：</span>
+                <span class="a-con-t"></span></div>
+            <div id="a-tel">
+                <span class="ad-wxName">联系电话：</span>
+                <span class="a-con-t1"></span></div>
+        </div>
+
+        <div class="clear"></div>
+	<!--动作-->
+        <div class="a-active">
+		<!--<ul>-->
+			<!--<li><i class="am-icon-phone" onclick="phone(e)"></i>  打电话</li>-->
+            <!---->
+			<!--<li><i class="am-icon-envelope"></i>  发短信  </li>-->
+		<!---->
+		<!--</ul>-->
+        </div>
+	<!--订单-->
+        <div class="a-dingdan">
+		<div>
+			<span class="ad-ticketDetails">成功报名数量：</span>
+			<span id="num"></span>
+		</div>
+			<div>
+				<span class="ad-ticketDetails">成功售卡数：</span>
+				<span id="num1"></span>
+			</div>
+			<div>
+				<span class="ad-ticketDetails">持卡数：</span>
+				<span id="num3"></span>
+			</div>
+		<div>
+			<span class="ad-ticketDetails">申请时间：</span>
+			<span id="ac-time"></span>
+		</div>
+	</div>
+        <div class="a-dingdan a-dingdan2">
+
+		</div>
+
+        <div class="m-footer" data-id="1">
+            <div class="m-left-1" onclick="comeback()">返回</div>
+            <div class="m-right-1" onclick="editPersonState(this)" data-id="2">审核通过</div>
+        </div>
+		<div class="m-footer hide" data-id="2">
+			<div class="m-left-1" onclick="comeback()">返回</div>
+			<div class="m-right-1" onclick="editPersonState(this)" data-id="3">禁用</div>
+		</div>
+        <div class="m-footer hide" data-id="3">
+            <div class="m-left-1" onclick="comeback()">返回</div>
+            <div class="m-right-1" onclick="editPersonState(this)" data-id="2">审核通过</div>
+        </div>
+        <div class="m-footer hide" data-id="4">
+            <div class="m-left-1" onclick="comeback()">返回</div>
+            <div class="m-right-1" onclick="editPersonState(this)" data-id="2">恢复</div>
+        </div>
+	</body>
+
+</html>

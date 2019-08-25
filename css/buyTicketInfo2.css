@@ -1,0 +1,87 @@
+﻿.wjlogo{text-align: center;}
+.TopBgLogo{background-color: rgb(255, 255, 255);}
+body{background-color: rgb(255, 255, 255);}
+#next_button, #confirm_verify_btn, .wjprogress_new .barbox{background-color: rgb(0, 255, 0);}
+#control_panel .button{border: 1px solid #00FF00;color: #FFFFFF;background-color: #00FF00}
+#control_panel .prev_button{border-width:1px;border-style:solid;border-color: rgb(0, 255, 0);color: rgb(0, 255, 0)}
+.login_input .button{background-color: rgb(0, 255, 0);}
+.login_input .button:hover{opacity: 0.8;}
+.login_input .button{color: rgb(250,250,250)}
+.phone_end .button{background-color: rgb(0, 255, 0);}
+.phone_end .button{color: rgb(250,250,250)}
+.phone_end .button:hover{opacity: 0.8;}
+.checkboxStyle{
+    border: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.bti2-enter{
+    display: inline-block;
+    color: #FFFFFF;
+    height: 40px;line-height: 40px;width: 80%;margin:15px auto 0;text-align: center;
+    border-radius: 30px;
+    border:0;
+    /*渐变*/
+    background-image: -webkit-radial-gradient(circle,#6594FE,#296BFF);
+    background-image: radial-gradient(circle,#6594FE,#296BFF);
+    font-size: 15px;
+}
+/*radio美化start*/
+.regular-radio {display: none;}
+.regular-radio + label {-webkit-appearance: none;background-color: #FFFFFF;border: 1px solid #cacece;padding: 7px;border-radius: 50px;display: inline-block;position: relative;}
+.regular-radio:checked + label:after {content: ' ';width: 6px;height: 6px;border-radius: 60px;position: absolute;top: 4px;background: #45aaff;left: 4px;}
+.regular-radioLabel{position: absolute;top: 2px;margin-right: 10px;}
+.inputLabel{position: relative;}
+/*radio美化end*/
+
+/*checkbox美化start*/
+label {display: inline;}
+.regular-checkbox {display: none;}
+.regular-checkbox + label {background-color: #fafafa;border: 1px solid #cacece;box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);padding: 9px;border-radius: 3px;display: inline-block;position: relative;top:5px;margin-right:10px;}
+.regular-checkbox:checked + label {background-color: #e9ecee;border: 1px solid #adb8c0;box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);color: #99a1a7;}
+.regular-checkbox:checked + label:after {    background: #53A4F4;
+    content: '\2714';
+    font-size: 15px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    left: 0px;
+    top: -1px;
+    text-align: center;
+    font-weight:100;}
+/*checkbox美化end*/
+.e-join{width:50px;height: 50px;}
+.e-imgExit{position: absolute;top: -8px;width:20px;left: 37px;display: none}
+.subImg{position: relative;display: inline-block;margin: 2%}
+.e-img{position: relative;display: inline-block;width: 100px;}
+.am-modal-btn{font-size: 16px;}
+.am-modal-hd{font-size: 16px;}
+
+/*验证码*/
+.bti-code{
+    width: 25%;
+    position: absolute;
+    top: 3px;
+    right: 3%;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #22bb62;
+    font-size: 12px;
+    height: 30px;
+    text-align: center;line-height: 30px;
+}
+.topic_input{
+    position: relative;
+}
+.am-datepicker td{font-size: 20px;}
+.am-datepicker-select{font-size: 20px;}
+.bigImg{
+    position: absolute;
+    top:0;
+}
+.in-code{text-align: center;}
+.in-code>p{width: 120px;margin:auto}
+.wxImg img{width: 120px;height: 120px;}
+.wj_title2{width:100% !important}

@@ -1,0 +1,103 @@
+body{
+    /*background-color: #000;*/
+    margin: 0;
+    height: 100%;
+}
+html{
+    height:100%;
+}
+.section{position: relative;}
+.in-name{position: absolute;top:0;z-index: 2;}
+.ic-bgImg{width: 100%;/*margin-bottom: 30px*/height: 100%;}
+body:after{
+    overflow: hidden;
+    clear: both;
+}
+.in-name{
+    width: 100%;
+     position: absolute;
+    top:1%;
+  /*  padding-top: 5px;*/
+    color: #60639f;
+    overflow: hidden;
+}
+.in-name img{
+    width: 59px;
+    height: 59px;
+}
+.username{
+    margin-top: 1.8%;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    line-height: 20px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.in-activity{
+    width: 71%;
+    position: absolute;
+    margin: -50px 14.5% 0;
+    height: 50px;
+    top:50%;
+    color: #fff;
+    font-size: 20px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    line-height: 25px;
+}
+.in-info{
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    top:75%;
+    margin-top: -90px;
+}
+.in-time{
+    font-size: 15px;
+    color:#e0dff2;
+}
+.in-place{
+    width: 71%;
+    margin: auto;
+    font-size: 15px;
+    color: #908fa3;
+    height: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+}
+.in-saoyisao{
+    position: relative;
+    width: 100%;
+    height: 142px;
+    margin-top: -162px;
+}
+.in-code{
+    width: 120px;
+    height: 120px;
+    margin:auto;
+    border: 1px solid #fff;
+}
+.in-code img{
+    margin-top: 5px;
+    background-color: #fff;
+    width: 108px;
+    height: 108px;
+}
+.in-changan{
+    margin-bottom: 4px;
+    color: #998edb;
+    font-size: 13px;
+}
+
+
+.bigImg{
+    position: absolute;
+    top:0;
+}

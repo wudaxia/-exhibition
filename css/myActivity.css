@@ -1,0 +1,26 @@
+body{background-color: #F8FAF9}
+.index-f{width: 100%;margin-top: 10px;}
+.index-img{display: inline-block;}
+.index-f img{margin-left: 0;margin-right: 3px;}
+.lookdetail1{margin-right: 10px;}
+.index-img img{width: 25px;height: 25px;}
+.bigImg{
+    position: absolute;
+    top:0;
+}
+.index-img{display: block;width: 100%;}
+.ma-ticket2{
+    border:1px solid #D1D1D1;
+    /*height: 30px;*/
+    /*line-height: 40px;*/
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 13px;
+    line-height: 25px;
+    border-radius: 3px;
+    color: #0f9ae0;
+
+}
+/*layer*/
+.layui-m-layer{z-index: inherit !important;}
+.layui-m-layermain{z-index: 999999999 !important;}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css?v=2017.6.8"/>
+    <link rel="stylesheet" href="../base/css/base.css?v=2017.6.8"/>
+    <link rel="stylesheet" href="../css/inviteCode.css?v=2017.6.13"/>
+    <link rel="stylesheet" href="../css/headerAndFooter.css" />
+    <script type="text/javascript" src="../assets/js/jquery.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js?v=2017.6.22"></script>
+    <script type="text/javascript" src="../js/Function.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/template.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/wxReturn.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/pinchzoom.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/inviteCode.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <title>邀请函</title>
+</head>
+<script>
+    var actIds="";
+    var partIds="";
+    actIds=JSON.parse(sessionStorage.getItem("acActId"));
+    partIds=JSON.parse(sessionStorage.getItem("acPartId"));
+    var url =baseUrl+'activeModel.html?actId='+actIds+'&partId='+partIds+'';
+    var url2 =location.href.split('#')[0];
+    function configWX()
+    {
+        var data = '{"url":"' + url2 + '","actId":' + actIds + ',"partId":' + partIds + '}';
+        AjaxSubmit("get", JSON.parse(data), basePath + "WxBind/getActivityInfoQrcode", getActivityInfoQrcode_fun);
+    }
+    function getActivityInfoQrcode_fun(res)
+    {
+        console.log(res);
+
+        if(res.result.code=="300")
+        {
+            return;
+
+        }
+        var wxconfig=res.dataPacket.wxConfig;
+        var wxShare = res.dataPacket.wxShare;
+        wx.config({
+            //debug: true,  // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId:wxconfig.AppID, // 必填，公众号的唯一标识
+            timestamp: wxconfig.time, // 必填，生成签名的时间戳
+            nonceStr: wxconfig.noncestr, // 必填，生成签名的随机串
+            signature: wxconfig.sign,// 必填，签名，见附录1
+            jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage","onMenuShareQQ"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.ready(function(){
+            wx.onMenuShareTimeline({
+                title: wxShare.wxtitle, // 分享标题
+                desc: wxShare.wxdesc, // 分享描述
+                link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: wxShare.wximgUrl, // 分享图标
+
+                success: function () {
+                    alert("成功分享")
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+
+
+            });
+            wx.onMenuShareAppMessage({
+                title: wxShare.wxtitle, // 分享标题
+                desc: wxShare.wxdesc, // 分享描述
+                link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl:  wxShare.wximgUrl, // 分享图标
+
+                success: function () {
+                    alert("成功分享")
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareQQ({
+                title: wxShare.wxtitle, // 分享标题
+                desc: wxShare.wxdesc, // 分享描述
+                link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: wxShare.wximgUrl, // 分享图标
+
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+        });
+
+    }
+</script>
+<body>
+<input value="配置0" type="button" id="configWXs" style="display: none" class="hide" onclick="configWX()" />
+<div class="section">
+    <img src="" class="ic-bgImg"/>
+  <!--  <div class="texC in-name">
+        <img src="../img/head-img.png">
+        <p class="username texC">二驴二驴二驴二驴</p>
+    </div>
+    <div class="in-activity texC">
+        设计海报
+    </div>-->
+<!--    <div class="in-info texC">
+        <div class="in-time">2017-6-12 19:00</div>
+        <div class="in-place texC">浙江省宁波市海曙区高桥镇秀芬村学院路门牌899号 老孙饭堂(大红鹰中区店)</div>
+    </div>-->
+    <div class="in-saoyisao texC">
+        <div class="in-changan">长按或扫一扫报名</div>
+      <div class="in-code"><!--<img src="../img/code.png">--></div>
+    </div>
+</div>
+</body>
+</html>

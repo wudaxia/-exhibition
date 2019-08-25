@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css?v=2017.6.8"/>
+    <link rel="stylesheet" href="../base/css/base.css?v=2017.6.8"/>
+    <link rel="stylesheet" href="../css/headerAndFooter.css?v=2017.6.8"/>
+    <link rel="stylesheet" href="../css/activeDetails.css?v=2017.6.8"/>
+    <script type="text/javascript" src="../base/js/jquery-1.7.1.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js?v=2017.6.22"></script>
+    <script type="text/javascript" src="../js/jquery.event.drag-1.5.min.js?v=2017.2.27"></script>
+    <script type="text/javascript" src="../js/jquery.touchSlider.js?v=2017.2.27"></script>
+    <script type="text/javascript" src="../js/Function.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/template.js?v=2017.6.20"></script>
+    <script type="text/javascript" src="../js/wxReturn1.js?v=2017.6.20"></script>
+    <script type="text/javascript" src="../js/activeDetails.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  
+    <script>
+        var actIds,partIds;
+        var shareActives=JSON.parse(sessionStorage.getItem("shareActives"));
+        {
+            if(shareActives!=null&&shareActives!=undefined&&shareActives!="")
+            {
+                 actIds = shareActives.actId;
+                 partIds = shareActives.partId;
+            }
+            else{
+                 actIds = "";
+                 partIds ="";
+            }
+        }
+        var url =baseUrl+'activeModel.html?actId='+actIds+'&partId='+partIds+'';
+        var url2 =location.href.split('#')[0];
+        function configWX()
+        {
+            var shareActives=JSON.parse(sessionStorage.getItem("shareActives"));
+            if(shareActives!=null&&shareActives!=undefined&&shareActives!="")
+            {
+                var actId = shareActives.actId;
+                var partId = shareActives.partId;
+                var data = '{"url":"' + url2 + '","actId":' + actId + ',"partId":' + partId + '}';
+                AjaxSubmit("get", JSON.parse(data), basePath + "WxBind/getActivityInfoQrcode", getActivityInfoQrcode_fun);
+            }
+        }
+        function getActivityInfoQrcode_fun(res)
+        {
+            console.log(res);
+
+            if(res.result.code=="300")
+            {
+                return;
+
+            }
+            var wxconfig=res.dataPacket.wxConfig;
+            var wxShare = res.dataPacket.wxShare;
+            wx.config({
+                //debug: true,  // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                appId:wxconfig.AppID, // 必填，公众号的唯一标识
+                timestamp: wxconfig.time, // 必填，生成签名的时间戳
+                nonceStr: wxconfig.noncestr, // 必填，生成签名的随机串
+                signature: wxconfig.sign,// 必填，签名，见附录1
+                jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage","onMenuShareQQ"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            });
+		wx.ready(function(){
+                 wx.onMenuShareTimeline({
+                title: wxShare.wxtitle, // 分享标题
+                desc: wxShare.wxdesc, // 分享描述
+                link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: wxShare.wximgUrl, // 分享图标
+
+                success: function () {
+                  alert("成功分享")
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+
+
+                 });
+                 wx.onMenuShareAppMessage({
+                     title: wxShare.wxtitle, // 分享标题
+                     desc: wxShare.wxdesc, // 分享描述
+                     link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                     imgUrl:  wxShare.wximgUrl, // 分享图标
+
+                     success: function () {
+                         alert("成功分享")
+                     },
+                     cancel: function () {
+                         // 用户取消分享后执行的回调函数
+                     }
+                 });
+
+                wx.onMenuShareQQ({
+                       title: wxShare.wxtitle, // 分享标题
+                                     desc: wxShare.wxdesc, // 分享描述
+                                     link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                     imgUrl:  wxShare.wximgUrl, // 分享图标
+
+                    success: function () {
+                       // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                       // 用户取消分享后执行的回调函数
+                    }
+                });
+
+ });
+
+        }
+    </script>
+    <title>活动详情页</title>
+</head>
+<body>
+
+<div class="body">
+    <input value="配置0" type="button" id="configWXs" class="hide" onclick="configWX()" />
+    <div class="section">
+        <div class="main_visual">
+            <div class="flicking_con">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+            </div>
+            <div class="main_image">
+                <ul class="ad-bannerUl">
+                    <!--<li><img class="img_1" src="http://s.amazeui.org/media/i/demos/bing-1.jpg"/></li>-->
+                    <!--<li><a href=""><img class="img_2" src="http://s.amazeui.org/media/i/demos/bing-2.jpg"/></a></li>-->
+                    <!--<li><a href=""> <img class="img_3" src="http://s.amazeui.org/media/i/demos/bing-3.jpg"/></a></li>-->
+                    <!--<li><a href=""><img class="img_2" src="http://s.amazeui.org/media/i/demos/bing-2.jpg"/></a></li>-->
+                </ul>
+                <a href="javascript:;" id="btn_prev"></a>
+                <a href="javascript:;" id="btn_next"></a>
+            </div>
+        </div>
+        <div class="ac-title">
+            <!--<p class="title font14 mB5">宁波会展中心爱德拉活动活动活动拉活动活动</p>-->
+            <!--<div class="mB22"><span>免费送礼品</span></div>-->
+        </div>
+        <div class="ac-image">
+
+        </div>
+        <div class="ac-person">
+            <div class="ac-user">
+                <table class="mB23">
+                    <tr class="ac-userTr">
+                        <!--<td class="ac-headimg"><img src="../img/head-img.png"></td>-->
+                        <!--<td class="ac-info"><div class="ac-name">王女士</div>-->
+                        <!--<div class="ac-tel"><p><span class="ac-line">实名认证&nbsp;</span>&nbsp;好评率：100%</p></div>-->
+                        <!--</td>-->
+                        <!--<td class="ac-more">-->
+                        <!--<div class="ac-moword fr">-->
+                        <!--<span class="ac-mo">更多</span>-->
+                        <!--<img src="../img/more.png">-->
+                        <!--</div>-->
+                        <!--</td>-->
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="ac-introduce">
+            <div class="ac-acintro"><img src="../img/activity1.png" class="fl"><p class="ac-activity fl">活动介绍:</p></div>
+            <!--<p class="ac-introword">专业的服务态度，合理的理念思维，精英的聚集地，活-->
+            <!--动获了宁波政府的高度肯定。是理想的现实详。吸引了大批人才汇聚。你值得拥有。</p>-->
+            <!--<p class="ac-introword">活动地址：宁波市人才活动中心</p>-->
+            <!--<p class="ac-introword">活动时间：23232</p>-->
+        </div>
+    </div>
+    <div class="am-modal am-modal-alert am-modal-out" tabindex="-1" id="my-alerts" style="display: none;">
+       <img src="../img/share2.png" onclick="closeThis()" style="width: 100%;position: absolute;top: 0;left: 0;height: 100%;"/>
+    </div>
+    <div class="footer">
+        <div class="ac-footer pFb">
+            <div class="ac ac-phone">
+                <a href="" class="ac-phoneA">
+                    <img src="../img/phone.png">
+                    <div class="ac-footword">通话</div>
+                </a>
+            </div>
+            <div class="ac ac-comment" onclick="activeShare(this)">
+                 <img src="../img/share.png">
+                 <div  class="ac-footword">分享</div>
+            </div>
+            <div class="am-btn fr ad-quickSignUp" onclick="o_apply(this)">立即报名</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

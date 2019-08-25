@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="renderer" content="ie-comp">
+
+		<title>门票管理</title>
+
+		<link rel="stylesheet" href="../base/css/amazeui.min.css" />
+		<link rel="stylesheet" href="../css/scrollbar.css" />
+		<link rel="stylesheet" href="../css/headerAndFooter.css" />
+		<link rel="stylesheet" href="../css/order.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<link href="../css/jquery.searchableSelect.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../css/ticket.css" />
+		<script type="text/javascript"  src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/jquery.searchableSelect.js"></script>
+		<script type="text/javascript" src="../assets/js/amazeui.js" ></script>
+		<script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js?v=2017.6.22"></script>
+		<script type="text/javascript" src="../js/zepto.min.js?v=2017.6.22"></script>
+<!--		<script type="text/javascript" src="../js/Function.js" ></script>
+		<script type="text/javascript" src="../js/template.js" ></script>
+		<script type="text/javascript" src="../js/wxReturn.js" ></script>-->
+		<script type="text/javascript" src="../js/ticket.js" ></script>
+	</head>
+	<body>
+		<div class="clear"></div>
+		<!--导航栏-->
+			<div>
+				<ul class="t-ticketStyleUl">
+					<!--<li class="all lic_1" onclick="dj1()"><a href="#">全部</a></li>-->
+					<li class="t-ticketStyleLi" data-style="1" data-name="1" onclick="ticketStyle(this)">未出售</li>
+					<li class="t-ticketStyleLi" data-style="2" data-name="2" onclick="ticketStyle(this)">待确认</li>
+					<li class="t-ticketStyleLi" data-style="3" data-name="3" onclick="ticketStyle(this)">已出售</li>
+					<li class="t-ticketStyleLi"  data-style="4" data-name="4" onclick="ticketStyle(this)">已作废</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<!--内容栏-->
+		 <div class="kl"></div>
+
+		<div id="wrapper">
+			<div id="scroller">
+				<ul id="thelist">
+
+				</ul>
+				<div class="loadBox"></div>
+			</div>
+		</div>
+		<!--<div class="am-footer">已全部加载</div>-->
+        <!--未出售门票-->
+        <div class="m-footer" data-name="1">
+            <div class="m-left-5" onclick="t_back(this)"data-sum="1">返回</div>
+            <div class="m-left-1" data-sum="3" onclick="ticketDel(this)">作废</div>
+            <div class="m-left-1 t-footChose disn" data-sum="1" onclick="ticketShare(this)">分配</div>
+            <div class="m-right-1 t-footChose disn" data-sum="2" onclick="ticketShare(this)">批量分配</div>
+        </div>
+        <div class="m-footer disn" data-name="11">
+            <div class="m-left-2"  onclick="t_shareCencel(this)" data-name="1">取消</div>
+            <div class="m-right-2" onclick="next()">下一步</div>
+        </div>
+        <div class="m-footer disn" data-name="12">
+            <div class="m-left-4 t-footChose"  data-sum="1" onclick="t_cencel(this)">取消</div>
+            <div class="m-left-4 t-footChose"  data-sum="1" onclick="t_sure(this)">确定</div>
+            <div class="m-right-4 t-footChose" data-sum="2" onclick="ticketChose(this)" >批量选择</div>
+        </div>
+        <div class="m-footer disn" data-name="999">
+            <div class="m-left-4" onclick="t_cencel1(this)">取消</div>
+            <div class="m-right-4" onclick="t_sure(this)" >确定</div>
+        </div>
+        <!--待确认门票-->
+        <div class="m-footer disn" data-name="2">
+            <div class="m-left-3"  data-sum="1" onclick="ticketReturn(this)">重置</div>
+            <div class="m-right-3" data-sum="2" onclick="ticketReturn(this)">确认</div>
+        </div>
+        <div class="m-footer disn" data-name="21">
+            <div class="m-left-4 t-footChose"  data-sum="1" onclick="t_cencel(this)">取消</div>
+            <div class="m-left-4 t-footChose"  data-sum="1" onclick="t_sure(this)">确定</div>
+            <div class="m-right-4 t-footChose" data-sum="2" onclick="ticketChose(this)" >批量选择</div>
+        </div>
+        <!--已出售门票-->
+        <div class="m-footer disn" data-name="3">
+            <div class="m-left-5" onclick="t_back(this)"data-sum="1">返回</div>
+            <div class="m-right-5" onclick="goData(this)" >导出数据</div>
+        </div>
+        <!--已作废门票-->
+        <div class="m-footer disn" data-name="4" data-next="4">
+            <div class="m-left-3"  data-sum="1" onclick="ticketReply(this)">恢复</div>
+            <div class="m-right-3" data-sum="2" onclick="ticketChose(this)">批量恢复</div>
+        </div>
+	</body>
+	<div class="am-modal am-modal-no-btn" tabindex="-1" id="your-modal2"  >
+		<div class="am-modal-dialog" style="width: 280px ;height: 400px">
+			<div class="am-modal-hd">门票出售(1)
+				<a href="javascript: void(0)" onclick="startDefault()" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+			</div>
+			<select class="kz" >
+				<option value="0">报名用户</option>
+			</select>
+			<div class="foot">
+				<span  class="t-saleTicketBtn" onclick="miss()">取消</span>
+				<span  class="t-saleTicketBtn t-saleTicketBtn2"  onclick="mai(this)">确认</span>
+			</div>
+		</div>
+	</div>
+	<div class="am-modal am-modal-no-btn" tabindex="-1" id="your-modal"  >
+		<div class="am-modal-dialog" style="width: 280px ;height: 400px">
+			<div class="am-modal-hd">下级门票分配<span class="t-nextPeroleTicketNum"></span>
+				<a href="javascript: void(0)"  onclick="startDefault()" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+			</div>
+			<div class="am-modal-bd">
+				<!--<div class="layui-form">-->
+				<!--<div class="layui-inline">-->
+				<!--<select name="city"lay-verify="required"lay-search class="kz">-->
+				<!--<option value="" >搜索下级用户</option>-->
+				<!--</select>-->
+				<!--</div>-->
+				<!--</div>-->
+				<select class="kp" >
+					<option value="">下级门票分配</option>
+					<!--<option value="1">13566375655</option>-->
+				</select>
+				<div class="foot">
+					<button type="button" class="am-btn  am-radius t-saleTicketBtn" onclick="missone()">取消</button>
+					<button type="button" class="am-btn  am-radius t-saleTicketBtn"  onclick="makesure1(this)">确认分配</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</html>

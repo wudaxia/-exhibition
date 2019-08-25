@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证手机</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../base/css/base.css?v=2017.2.14"/>
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css?v=2017.2.22"/>
+
+    <link rel="stylesheet" href="../css/login.css?v=2017.2.15"/>
+    <script type="text/javascript" src="../assets/js/jquery.min.js?v=2017.2.14"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.2.22"></script>
+    <script type="text/javascript" src="../js/Function.js?v=2017.2.122"></script>
+    <script type="text/javascript" src="../js/template.js?v=2017.2.16"></script>
+    <script type="text/javascript" src="../js/login.js?v=2017.2.16"></script>
+</head>
+<body class="bgF2F">
+<header>
+    <div class="p-logo" style="display: none;">
+        <!--<a href=""><img src="../img/logoG.png"/></a>-->
+        <div class="p-logoWord">
+            <a href="tel:15925601800">
+                <div class="fl p-logoWordImg"><img src="../img/phoneG.png"/></div>
+                <div class="fr p-logoWords"></div>
+            </a>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="l-login-B">
+        <div class="l-login">
+            <div class="l-loginPrompt loginPromptWord">
+                <div>温馨提示：</div><div class="l-loginPromptWord">尊敬的客户，为了保障您的权益，请绑定您的微信号！</div>
+            </div>
+            <div class="lUser">
+                <div class="l-inputbox">
+                    <input type="tel" class="l-user" placeholder="手机号码" autocomplete="off" />
+                     <span  style="display:inline-block"  class="l-getPass"  onclick="getCode()">获取验证码 </span>
+                </div>
+             
+            </div>
+            <div class="lPass">
+                <div class="l-inputbox">
+                    <input type="tel" class="l-pass" placeholder="验证码" />
+                </div>
+            </div>
+            <div class="texC">
+               <span style="display:inline-block"  class="l-enter">确认绑定</span>
+            </div>
+        </div>
+        <!--<div class="av-login">-->
+            <!--<div class="avUser">-->
+                <!--<input type="tel" class="av-user" placeholder="手机号码" autocomplete="off"/>-->
+            <!--</div>-->
+            <!--<div class="avPass">-->
+                <!--<input type="text" class="av-pass" placeholder="现场卡号登录"/>-->
+            <!--</div>-->
+            <!--<div class="texC">-->
+                <!--<input class="av-enter" value="登录" type="button" onclick="noClick(this)"/>-->
+                <!--<p class="av-enterWord">登录失败，请点击此处进行手机验证登录</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="l-bottom">
+        <div class="l-bottom1">说明：</div>
+        <div class="l-bottom1">1、公众号客户验证手机一次即可。</div>
+        <div class="l-bottom2">2、如果您还未关注，请立刻关注我们！</div>
+<div class="l-bottom2">3、1小时内只能获取5次验证码！</div>
+    </div>
+    <div class="l-gzh" style="display: none">
+        <img src="../img/code.png"/>
+        <div>识别二维码&nbsp;&nbsp;关注公众号</div>
+    </div>
+</section>
+<footer>
+    <!--<div class="av-other texC">-->
+        <!--<div class="texC">-->
+            <!--<span class="av-line fl"></span><span class="av-lineWord">其它登录方式</span><span class="fr av-line"></span></div>-->
+        <!--<img src="http://sanrenhe.oss-cn-hangzhou.aliyuncs.com/nbsrh/wxWeb/imgs/wechat.png" class="av-otherImg"/>-->
+    <!--</div>-->
+</footer>
+</body>
+</html>

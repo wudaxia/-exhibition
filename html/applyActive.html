@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>微信报名</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!--<meta name="format-detection" content="telephone=no" />-->
+		<link rel="stylesheet" href="../base/css/amazeui.min.css" />
+		<link rel="stylesheet" href="../base/css/layui.css" />
+		<!--<link rel="stylesheet" href="../css/scrollbar.css">-->
+		<link rel="stylesheet" href="../css/headerAndFooter.css" />
+		<link rel="stylesheet" href="../base/switch-master/amazeui.switch.css" />
+		<link rel="stylesheet" href="../css/applyActive.css" />
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="../base/js/jquery-1.7.1.min.js" ></script>-->
+	<script type="text/javascript" src="../base/js/amazeui.min.js" ></script>
+		<script type="text/javascript" src="../js/Function.js" ></script>
+	<script type="text/javascript" src="../base/switch-master/amazeui.switch.min.js" ></script>
+	<script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js" ></script>
+	<script type="text/javascript" src="../js/template.js"></script>
+	<script type="text/javascript" src="../js/wxReturn.js" ></script>
+	<script type="text/javascript" src="../js/ApplyActive.js" ></script>
+	</head>
+	<body>
+	<div class="my-sectionTitle">
+		<ul class="my-sectionTitleUl">
+			<li class="my-sectionTitleLi my-sectionTitleLiChose" data-id="0" onclick="choseState(this)">全部</li>
+			<li class="my-sectionTitleLi" data-id="1" onclick="choseState(this)">报名用户</li>
+			<li class="my-sectionTitleLi" data-id="3" onclick="choseState(this)">条码用户</li>
+			<li class="my-sectionTitleLi" data-id="2" onclick="choseState(this)">二维码用户</li>
+			<li class="my-sectionTitleLi" data-id="4" onclick="choseState(this)">双票用户</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+		<!--<div class="m-main" onclick="tz()">-->
+		<!--票的种类-->
+		<!--<div class="m-type">-->
+			<!--<span class="m-left">2-10</span>-->
+			<!--<span class="m-right">未购卡</span>-->
+		<!--</div>-->
+		<!--<div class="clear"></div>-->
+
+		<!--&lt;!&ndash;内容票&ndash;&gt;-->
+		<!--<div class="m-cont">-->
+			 <!--<div class="inputtype"  style="display: none;">-->
+		    	<!--<input type="checkbox" checked="checked" />-->
+		    <!--</div>-->
+			<!--<img  class=" am-circle" src="../img/img_01.jpg" width="50" height="50"/>-->
+			<!--<div class="m-cont-text">-->
+				<!--<span class="a-con-name">微信用户</span><br />-->
+				<!--<span class="m-cont-text1">备注信息</span>-->
+			<!--&lt;!&ndash;	<span class="m-cont-money">按钮|添加备注</span>&ndash;&gt;-->
+			<!--&lt;!&ndash;	<input type="checkbox" data-role="flipswitch" name="switch" id="switch">&ndash;&gt;-->
+			<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+    <!--</div>-->
+	
+	<!--提示加载完成-->
+	<!--<div class="am-footer">-->
+		<!--已全部加载完成-->
+	<!--</div>-->
+		<div id="wrapper">
+			<div id="scroller">
+				<ul id="thelist">
+
+				</ul>
+				<div class="loadBox"></div>
+			</div>
+		</div>
+	<!--取票购票-->
+	<div class="m-footer">
+		<div class="m-left-1" onclick="goback()">返回</div>
+		<div class="m-left-1" onclick="dc()">导出名单</div>
+		<!--<div class="m-right-1" onclick="sx()">筛选</div>-->
+	</div>
+
+	</body>
+
+</html>

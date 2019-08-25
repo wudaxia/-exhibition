@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完善购卡信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../base/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../base/css/base.css" />
+    <link rel="stylesheet" href="../css/headerAndFooter.css?v=2017.6.8"/>
+    <link rel="stylesheet" href="../css/buyTicketInfo.css" />
+
+    <script type="text/javascript" src="../assets/js/jquery.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/pinchzoom.js?v=2017.6.29"></script>
+    <script type="text/javascript" src="../js/Function.js?v=2017.6.9"></script>
+    <script type="text/javascript" src="../js/template.js?v=2017.6.20"></script>
+    <script type="text/javascript" src="../js/buyTicketInfo.js" ></script>
+</head>
+<body>
+<div class="header"></div>
+<div class="section">
+    <div class="bti-body">
+        <div class="bti-userInfo">
+            <div class="bti-userInfoT" onclick="clickQeCode(this)">
+                <div>完善购卡信息</div>
+                <div class="bti-clickQeCode">(点击生成二维码)</div>
+            </div>
+            <div class="bti-userInfoP">
+                <span class="bti-userInfoPT">实体卡号：</span>
+                <span class="bti-TicketNo"></span>
+                <div class="clear"></div>
+            </div>
+            <div class="bti-userInfoP bti-userInfoPLast">
+                <span class="bti-userInfoPT">售卡人：</span>
+                <span class="bti-userInfoName"></span>
+                <div class="clear"></div>
+            </div>
+            <div class="bti-userInfoP">
+                <span class="bti-userInfoPT">活动名称：</span>
+                <span class="bti-activeName"></span>
+                <div class="clear"></div>
+            </div>
+            <div class="bti-userInfoP">
+                <span class="bti-userInfoPT">活动时间：</span>
+                <span class="bti-activeTime"></span>
+                <div class="clear"></div>
+            </div>
+            <div class="bti-userInfoP">
+                <span class="bti-userInfoPT">活动地点：</span>
+                <span class="bti-activeAddress"></span>
+                <div class="clear"></div>
+            </div>
+            <div class="bti-userInfoP bti-userInfoP2">
+                <span class="bti-userInfoPT">姓名：</span>
+                <input type="text" class="bti-getName" placeholder="购卡人姓名"/>
+                <div class="clear"></div>
+            </div>
+            <div class="bti-userInfoP bti-userInfoP2">
+                <span class="bti-userInfoPT">手机：</span>
+                <input  type="tel" class="bti-getPhone" placeholder="购卡人手机号码"/>
+                <div class="clear"></div>
+            </div>
+            <div class="bti-userInfoP bti-userInfoP2 bti-userInfoPhoneCode">
+                <span class="bti-userInfoPT">验证码：</span>
+                <input type="text" class="bti-inputCode" placeholder="手机验证码"/>
+                <input type="button" class="bti-code" onclick="event.cancelBubble=true;getPhoneCode()" value="获取验证码">
+                <div class="clear"></div>
+            </div>
+            <div class="texC bti-userInfoP2">
+                <span class="bti-enter" onclick="buyTicket(this)">提交申请</span>
+            </div>
+            <div class=""><div class="in-code"></div></div>
+        </div>
+    </div>
+    <input type="button" value="关闭本窗口" onclick="WeixinJSBridge.call('closeWindow');" class="hide closeWX"/>
+</div>
+<!--<div class="footer texC">-->
+    <!--<div  class="am-navbar" id="">-->
+        <!--<ul class="am-navbar-nav am-cf am-avg-sm-3">-->
+            <!--<li>-->
+                <!--<a href="index1.html" class="">-->
+                    <!--<span class="am-navbar-label active" ><img src="../img/shouye2.png">首页</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="allActivity.html" class="">-->
+                    <!--<span class="am-navbar-label"><img src="../img/xiaoxi.png">活动</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;<li>-->
+                <!--<a href="order.html" class="">-->
+                    <!--<span class="am-navbar-label"><img src="../img/product.png">订单</span>-->
+                <!--</a>-->
+            <!--</li>&ndash;&gt;-->
+            <!--<li>-->
+                <!--<a href="personalCenter.html" class="">-->
+                    <!--<span class="am-navbar-label "><img src="../img/my.png">我的</span>-->
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</div>-->
+</body>
+</html>

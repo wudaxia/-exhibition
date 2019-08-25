@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css?v=2017.6.16"/>
+    <link rel="stylesheet" href="../base/css/base.css?v=2017.6.16"/>
+    <link rel="stylesheet" href="../css/userinfoDetail.css?v=2017.6.19"/>
+    <script type="text/javascript" src="../assets/js/jquery.min.js?v=2017.6.16"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js?v=2017.6.16"></script>
+    <script type="text/javascript" src="../base/layer.mobile-v2.0/layer_mobile/layer.js?v=2017.6.22"></script>
+    <script type="text/javascript" src="../js/Function.js?v=2017.6.16"></script>
+    <script type="text/javascript" src="../js/template.js?v=2017.6.16"></script>
+    <script type="text/javascript" src="../js/wxReturn.js"></script>
+    <script type="text/javascript" src="../js/userInfoDetail.js?v=2017.6.16"></script>
+    <title>个人信息详情</title>
+</head>
+<body>
+<!--头像-->
+<div class="us-nick us-nicks us hide ud-headImgs" data-id="1">
+    <div id="imgPreview" onclick="changeImg(this)">
+        <img src="../img/head-img.png" class="ud-headImg"  id="img1"/>
+    </div>
+    <div class="ud-headImgWord">（点图修改头像）</div>
+    <input type="file"  id="filetest" name="filetest" onchange="PreviewImage(this)"/>
+    <!-- <div class="us-tip fr">4-20个字符（汉字、字母、数字、下划线）</div>-->
+</div>
+<!--昵称-->
+<!--<div class="us-nick  us hide" data-id="2" >-->
+    <!--<div class="us-nickBg"><input class="us-nickname" type="text" placeholder="昵称：4-20个字符（汉字、字母、数字、下划线）"></div>-->
+   <!--&lt;!&ndash; <div class="us-tip fr">4-20个字符（汉字、字母、数字、下划线）</div>&ndash;&gt;-->
+<!--</div>-->
+
+<!--简介-->
+<div class="us-intr us-nicks us hide" data-id="4">
+<textarea placeholder="请输入个人简介信息"  maxlength="200" oninput="e_word(this)"></textarea>
+    <div class="e-wordNum">
+        <span class="e-word">0</span>
+        <span>/ 200</span>
+    </div>
+</div>
+
+<!--选择-->
+<div class="us-select us hide" data-id="3">
+    <div class="us-se us-select1">男</div>
+    <div class="us-se us-select2">女</div>
+</div>
+<footer>
+    <div class="texC ea-active fixB">
+        <input type="button" value="取消" class="us-enter us-btn1" onclick="noClick(this);cencel(this)"/>
+        <input type="button" value="保存" class="us-enter2 " onclick="noClick(this);enter(this)"/>
+    </div>
+</footer>
+</body>
+</html>
